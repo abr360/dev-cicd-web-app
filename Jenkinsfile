@@ -20,7 +20,7 @@ pipeline {
  stage('Deploy to Tomcat') {
  steps {
  script {
-deploy adapters: [tomcat9(credentialsId: '7cda37a0-e46e-4ed5-a2a3-d4f682113dcb', path: '', url: 'http://localhost:9090')], contextPath: '/cicd-web-app', war: '**/*.war' }
+deploy adapters: [tomcat9(credentialsId: '2feb930a-4c45-4f78-bd7c-e29f7f5c4f89', path: '', url: 'http://20.244.45.6:9090/')], contextPath: 'spring-boot-app', war: '**/*.war' }
  }
  }
  }
