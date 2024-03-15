@@ -20,7 +20,7 @@ pipeline {
  stage('Deploy to Tomcat') {
  steps {
  script {
-deploy adapters: [tomcat9(credentialsId: '7cda37a0-e46e-4ed5-a2a3-d4f682113dcb', path: '/manager/text', url: 'http://10.0.0.4:9090')], contextPath: 'cicd-web-app', war: '**/*.war'
+deploy adapters: [tomcat9(credentialsId: '7cda37a0-e46e-4ed5-a2a3-d4f682113dcb', path: '/manager/text', url: 'http://20.244.45.6:9090')], contextPath: '/cicd-web-app', war: '**/*.war'
  }
  }
  }
